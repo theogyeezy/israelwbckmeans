@@ -1,65 +1,70 @@
-ML-Enhanced Bullpen Fatigue Model for Team Israel
-
 Overview
+--------
 
-The ML-Enhanced Bullpen Fatigue Model is designed to predict pitcher fatigue levels based on workload, velocity trends, and high-leverage situations. This model helps optimize bullpen usage for Team Israel in the  (WBC) by providing actionable insights into reliever effectiveness and injury risk.
+The **ML-Enhanced Bullpen Fatigue Model** is designed to predict pitcher fatigue levels based on workload, velocity trends, and high-leverage situations. This model helps optimize bullpen usage for **(WBC)** by providing actionable insights into reliever effectiveness and injury risk.
 
 Features
+--------
 
-Fatigue Score Prediction: Uses machine learning to estimate a pitcher's fatigue based on recent workload.
+-   **Fatigue Score Prediction**: Uses machine learning to estimate a pitcher's fatigue based on recent workload.
 
-High-Leverage Situations Tracking: Evaluates the number of critical pitches thrown under pressure.
+-   **High-Leverage Situations Tracking**: Evaluates the number of critical pitches thrown under pressure.
 
-Velocity Drop Analysis: Identifies fatigue-related reductions in pitch velocity.
+-   **Velocity Drop Analysis**: Identifies fatigue-related reductions in pitch velocity.
 
-Cumulative Workload Metrics: Tracks pitches thrown over the last 7 and 14 days to assess fatigue build-up.
+-   **Cumulative Workload Metrics**: Tracks pitches thrown over the last 7 and 14 days to assess fatigue build-up.
 
-Rest Day Adjustment: Factors in recovery time between outings.
+-   **Rest Day Adjustment**: Factors in recovery time between outings.
 
-Machine Learning Model: Trained using Random Forest Regression, optimized for bullpen fatigue estimation.
+-   **Machine Learning Model**: Trained using **Random Forest Regression**, optimized for bullpen fatigue estimation.
 
 How It Works
+------------
 
-Data Inputs
+### Data Inputs
 
-Game Log Data:
+1.  **Game Log Data**:
 
-Date of appearance
+    -   Date of appearance
 
-Number of pitches thrown
+    -   Number of pitches thrown
 
-Rest days between outings
+    -   Rest days between outings
 
-Pitch velocity trends
+    -   Pitch velocity trends
 
-Cumulative pitch workload (last 7 and 14 days)
+    -   Cumulative pitch workload (last 7 and 14 days)
 
-High-leverage pitch count
+    -   High-leverage pitch count
 
-Machine Learning Pipeline:
+2.  **Machine Learning Pipeline**:
 
-Feature Engineering: Extracts fatigue-relevant statistics.
+    -   Feature Engineering: Extracts fatigue-relevant statistics.
 
-Model Training: Uses Random Forest Regression for fatigue score prediction.
+    -   Model Training: Uses **Random Forest Regression** for fatigue score prediction.
 
-Evaluation: Calculates Mean Absolute Error (MAE) to measure accuracy.
+    -   Evaluation: Calculates **Mean Absolute Error (MAE)** to measure accuracy.
 
 Model Implementation
+--------------------
 
-Dependencies
+### Dependencies
 
 Ensure you have the following Python libraries installed:
 
+```
 pip install pandas numpy scikit-learn matplotlib
+```
 
-Running the Model
+### Running the Model
 
-Prepare the dataset:
+1.  **Prepare the dataset**:
 
-Load game logs and pitcher performance data.
+    -   Load game logs and pitcher performance data.
 
-Train the Model:
+2.  **Train the Model**:
 
+```
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
@@ -81,17 +86,20 @@ predictions = model.predict(X_test)
 # Evaluate model performance
 mae = mean_absolute_error(y_test, predictions)
 print(f'Mean Absolute Error: {mae}')
+```
 
 Future Enhancements
+-------------------
 
-Real-time Data Integration: Sync with Statcast, Trackman, and Rapsodo for live fatigue tracking.
+-   **Real-time Data Integration**: Sync with **Statcast, Trackman, and Rapsodo** for live fatigue tracking.
 
-Opponent Bullpen Analysis: Identify when opposing relievers are most vulnerable.
+-   **Opponent Bullpen Analysis**: Identify when opposing relievers are most vulnerable.
 
-Injury Risk Prediction: Detect potential overuse injuries based on biomechanics data.
+-   **Injury Risk Prediction**: Detect potential overuse injuries based on biomechanics data.
 
-Game Context Factors: Include travel schedule, temperature, and strike zone difficulty in fatigue analysis.
+-   **Game Context Factors**: Include **travel schedule, temperature, and strike zone difficulty** in fatigue analysis.
 
 Conclusion
+----------
 
-This model could provide Team Israel’s coaching staff with a data-driven approach to bullpen management, ensuring optimal reliever usage during the World Baseball Classic. By leveraging machine learning and advanced analytics, the team can maximize performance and gain a competitive edge against international competition.
+This model provides **Team Israel's coaching staff** with a **data-driven approach** to bullpen management, ensuring optimal reliever usage during the **WBC**. By leveraging **machine learning and advanced analytics**, the team can maximize performance and gain a competitive edge against international competition.
