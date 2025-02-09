@@ -1,7 +1,7 @@
 Overview
 --------
 
-The **ML-Enhanced Bullpen Fatigue Model** is designed to predict pitcher fatigue levels based on workload, velocity trends, and high-leverage situations. This model helps optimize bullpen usage for **(WBC)** by providing actionable insights into reliever effectiveness and injury risk.
+The **ML-Enhanced Bullpen Fatigue Model** is designed to predict pitcher fatigue levels based on workload, velocity trends, and high-leverage situations. This model helps optimize bullpen usage for **WBC** by providing actionable insights into reliever effectiveness and injury risk.
 
 Features
 --------
